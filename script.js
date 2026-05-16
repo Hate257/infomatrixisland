@@ -1,5 +1,5 @@
 function showScreen(screenId) {
-    const screens = ['main-screen', 'encrypt-screen', 'detect-screen', 'result-human', 'result-ai'];
+    const screens = ['main-screen', 'encrypt-screen', 'detect-screen', 'result-human', 'result-ai', 'result-encrypted'];
     screens.forEach(id => {
         const element = document.getElementById(id);
         if (element) {
@@ -271,8 +271,6 @@ async function simulateAIListening() {
     biquadFilter.connect(distortion);
     distortion.connect(audioCtx.destination);
 
-    alert("SIMULATION START: Now you you will hear how your voice sounds to AI.");
+    alert("SIMULATION START: Now you will hear how your voice sounds to AI.");
     source.start(0);
 }
-
-
